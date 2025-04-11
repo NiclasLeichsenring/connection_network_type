@@ -253,7 +253,7 @@ extension SwiftConnectionNetworkTypePlugin: FlutterStreamHandler {
             }
             
             // 5G - NR and NR NSA
-            if #available(iOS 14.1, *), tech == CTRadioAccessTechnologyNR || tech == "NRNSAMode" {
+            if #available(iOS 14.1, *), tech == CTRadioAccessTechnologyNR || tech == CTRadioAccessTechnologyNRNSA {
               return NetworkStatus.mobile5G.value
             }
           } else {
